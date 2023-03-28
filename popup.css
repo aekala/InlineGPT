@@ -17,12 +17,10 @@ body {
 }
 
 #prompt-copy-btn {
-    margin-top: 1.5rem;
-    /* background-color: #E4FDE1;  */    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #292929;
-    /* border: none; */
     border: 2px solid #E4FDE1;
-    /* color: #292929; */
     color: white;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -44,21 +42,22 @@ body {
 }
 
 .visible {
-    visibility: visible !important;
+    visibility: visible;
+    
 }
   
 .hidden {
-    visibility: hidden !important;
+    visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
 }
 
 .no-select {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-  }
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}  
