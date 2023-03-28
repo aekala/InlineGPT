@@ -35,7 +35,7 @@ async function callChatGPT(prompt) {
     const requestBody = {
         "model": "text-davinci-003",
         "prompt": prompt,
-        "max_tokens": 192
+        "max_tokens": 256
     }
     
     await fetch("https://api.openai.com/v1/completions", {

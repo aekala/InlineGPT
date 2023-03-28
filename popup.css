@@ -1,24 +1,47 @@
 body {
     background-color: #292929;
     color: #E4FDE1;
-    width: 25rem;
-    height: 23rem;
 }
 
-#prompt-instruction {
+.content {
+    width: 28rem;
+    height: 22rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+ }
+
+#prompt-instruction {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#prompt-text {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #prompt-input {
     background-color: #E4FDE1;
     white-space: pre-wrap;
-    height: 15rem;
+    height: 14rem;
     width: 25rem;
+    padding: 1rem 1rem;
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+}
+
+.copy {
+    float: left;
+    margin: 1rem 0 1rem 1.5rem;
 }
 
 #prompt-copy-btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     background-color: #292929;
     border: 2px solid #E4FDE1;
     color: white;
@@ -27,7 +50,6 @@ body {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 0.5rem;
-    transition-duration: 0.5s;
 }
 
 #prompt-copy-btn:hover {
@@ -61,3 +83,40 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }  
+
+
+.gradient-border {
+    margin: 0 auto;
+    height: 14rem;
+    width: 25rem;
+    --borderWidth: 5px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 7s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }

@@ -1,15 +1,18 @@
 <html>
   <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   </head>
   <body>
-    <div id="content">
-      <p id="prompt-instruction" class="no-select">Enter a prompt</p>
-      <p class="no-select">Example: <span id="prompt-text"></span></p>
-      <textarea id="prompt-input" type="text" autofocus></textarea>
-      <div class="copy-btn-div">
-        <button id="prompt-copy-btn" class="no-select">Copy</button>
-        <p id="copy-confirm-message" class="no-select">Copied to clipboard!</p>
+    <div class="content">
+      <p id="prompt-instruction" class="no-select">Enter Prompt</p>
+      <p id="prompt-text" class="no-select"></p>
+      <div class="gradient-border">
+        <textarea id="prompt-input" type="text" autofocus></textarea>
+      </div>
+      <div class="copy no-select">
+        <button id="prompt-copy-btn">Copy</button>
+        <p id="copy-confirm-message">Copied to clipboard!</p>
       </div>
     </div>
     <script src="prompts.js"></script>
