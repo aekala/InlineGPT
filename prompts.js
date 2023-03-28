@@ -1,22 +1,23 @@
 const promptExamples = [
-    "\"$ai(recommend me a movie)\"",
-    "\"$ai(tell me a joke)\"",
-    "\"$ai(give me a sandwich recipe)\"",
-    "\"$ai(who played Norm in Cheers?)\""
+    "\"$ai(Recommend me a movie)\"",
+    "\"$ai(What was the first feature-length animated movie ever released?)\"",
+    "\"$ai(What\'s the name of the skyscraper in Die Hard?)\"",
+    "\"$ai(Who played Norm in Cheers?)\""
 ];
 
-const copyToClipboard = (element) => {
+const copyToClipboard = async (element) => {
     const promptText = document.getElementById("prompt-input");
-    promptText.select();
     navigator.clipboard.writeText(promptText.value);
-    element.style.visibility = "visible";
+    element.classList.replace("hidden", "visible");
+    await wait(4000);
+    element.classList.replace("visible", "hidden");
 }
 
 const promptExample = document.getElementById("prompt-text");
 promptExample.innerHTML = promptExamples[Math.floor(Math.random() * promptExamples.length)];
 
 const copyConfirmationMessage = document.getElementById("copy-confirm-message");
-copyConfirmationMessage.style.visibility = "hidden";
+copyConfirmationMessage.classList.add("hidden");
 
 const copyButton = document.getElementById("prompt-copy-btn");
 copyButton.addEventListener("click", copyToClipboard.bind(null, copyConfirmationMessage));

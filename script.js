@@ -1,4 +1,4 @@
-async function handleInputEvent(event) {
+const handleInputEvent = async (event) => {
     const activeElement = event.target;
     if (activeElement.tagName === "INPUT" || activeElement.tagName === "TEXTAREA") {
         const content = activeElement.value;
@@ -7,12 +7,11 @@ async function handleInputEvent(event) {
             injectCSS(".prompt-selection::selection  { background: #fcba03 !important }");
             activeElement.classList.add("prompt-selection");
             activeElement.select();
-            await wait(1000);
+            await wait(1500);
             activeElement.value = "Querying ChatGPT...";
             activeElement.classList.remove("prompt-selection");
             const completion = await callChatGPT(prompt);
             activeElement.value = completion;
-            // activeElement.value = "ffffffff ffffffffffffff fffffffffffffffff ffffffffffff ffffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffff fffffffffffffffffffff fffffffffffffffffff fffffffffffffffffffffff fffffffffffffffffffffffffff ffffffffffffffffffffFffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
         } 
     } 
 }
@@ -49,8 +48,9 @@ async function callChatGPT(prompt) {
     })
     .then((response) => response.json())
     .then((data) => completion = data);
- 
-    return completion.choices[0].text;
+    console.log(completion.choices[0].text);
+
+    return completion.choices[0].text.trim();
 }
 
 const inputs = document.getElementsByTagName("INPUT");

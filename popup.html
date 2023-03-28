@@ -4,11 +4,13 @@
   </head>
   <body>
     <div id="content">
-      <p>Enter a prompt</p>
-      <p>Example: <span id="prompt-text"></span></p>
+      <p id="prompt-instruction" class="no-select">Enter a prompt</p>
+      <p class="no-select">Example: <span id="prompt-text"></span></p>
       <textarea id="prompt-input" type="text" autofocus></textarea>
-      <button id="prompt-copy-btn">Copy text</button>
-      <p id="copy-confirm-message">Copied to clipboard!</p>
+      <div class="copy-btn-div">
+        <button id="prompt-copy-btn" class="no-select">Copy</button>
+        <p id="copy-confirm-message" class="no-select">Copied to clipboard!</p>
+      </div>
     </div>
     <script src="prompts.js"></script>
     <script src="script.js"></script>

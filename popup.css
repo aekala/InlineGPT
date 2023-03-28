@@ -1,9 +1,64 @@
-* {
-    background-color: #131730;
-    color: white;
+body {
+    background-color: #292929;
+    color: #E4FDE1;
+    width: 25rem;
+    height: 23rem;
+}
+
+#prompt-instruction {
+    font-size: 1rem;
 }
 
 #prompt-input {
+    background-color: #E4FDE1;
     white-space: pre-wrap;
     height: 15rem;
+    width: 25rem;
 }
+
+#prompt-copy-btn {
+    margin-top: 1.5rem;
+    /* background-color: #E4FDE1;  */    
+    background-color: #292929;
+    /* border: none; */
+    border: 2px solid #E4FDE1;
+    /* color: #292929; */
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition-duration: 0.5s;
+}
+
+#prompt-copy-btn:hover {
+    background-color: #E4FDE1; 
+    color: #292929;
+}
+
+#copy-confirm-message {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.visible {
+    visibility: visible !important;
+}
+  
+.hidden {
+    visibility: hidden !important;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
