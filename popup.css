@@ -1,0 +1,9 @@
+* {
+    background-color: #131730;
+    color: white;
+}
+
+#prompt-input {
+    white-space: pre-wrap;
+    height: 15rem;
+}
