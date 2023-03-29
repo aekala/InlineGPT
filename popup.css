@@ -34,14 +34,15 @@ body {
     outline: none;
     resize: none;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .copy {
     float: left;
-    margin: 1rem 0 1rem 1.5rem;
+    margin: 1rem 0 0.75rem 1.5rem;
 }
 
-#prompt-copy-btn {
+.copy > button {
     background-color: #292929;
     border: 2px solid #E4FDE1;
     color: white;
@@ -52,9 +53,13 @@ body {
     border-radius: 0.5rem;
 }
 
-#prompt-copy-btn:hover {
+.copy > button:hover {
     background-color: #E4FDE1; 
     color: #292929;
+}
+
+#prompt-clear-btn {
+    margin-left: 5.5rem;
 }
 
 #copy-confirm-message {

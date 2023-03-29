@@ -1,16 +1,16 @@
 {
     "name": "InlineGPT",
-    "description": "Base Level Extension",
+    "description": "Use ChatGPT within a popup. You can also use it inline within text inputs. Read more at https://github.com/aekala/InlineGPT",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "hello_extensions.png"
+        "default_icon": "images/astronaut-blue.png"
     },
-    "content_scripts": [
-        {
-        "matches": ["https://*/*"],
-        "js": ["script.js"]
-        }
-    ]
+    "icons": {
+        "16": "images/astronaut-blue.png",
+        "32": "images/astronaut-blue.png",
+        "48": "images/astronaut-blue.png",
+        "128": "images/astronaut-blue.png"
+    }
 }
