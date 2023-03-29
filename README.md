@@ -11,7 +11,6 @@ In order to use this Google Chrome extension, you'll need to download the projec
 
 <img src="images/download.png" alt="download project as .zip">
 
-<br>
 Or if you have git installed on your computer, you can clone the repository by opening a terminal window, navigating to the folder you want to download the project to and using the following command:
 
 <br>
@@ -19,8 +18,6 @@ Or if you have git installed on your computer, you can clone the repository by o
 ```bash
 git clone https://github.com/aekala/InlineGPT.git
 ```
-
-<br>
 
 ## 2) Create an OpenAI Account 
 You'll need to create an OpenAI account to get your own API key that will allow you query ChatGPT. The free tier provides $5 worth of queries and you don't have to provide any payment info, so don't worry about getting charged if you hit the free tier limit. This step is also to not expose my own secret key and allow users to use up my own free tier :)
@@ -36,10 +33,7 @@ Copy the generated API key and replace the "REPLACE WITH API KEY" section within
 <br>
 Make sure not to delete the "Bearer" part of the line. 
 
-<br>
 <img src="images/api-key-replace.png" alt="insert api key on line 48">
-
-<br>
 
 ## 3) Load Extension to Google Chrome
 Before you can load this extension into Google Chrome, you'll have to enable "Developer mode" by typing in "chrome://extensions/" into the search bar and enabling the setting there. 
@@ -62,10 +56,8 @@ $ai(prompt)
 
 <img src="images/prompt.png" alt="insert api key on line 48">
 
-<br>
 Once you've written your prompt, InlineGPT will run your prompt through OpenAI's Completions API endpoint and populate the text box with the generated response. From there you can use the two buttons at the bottom of the popup to either copy or clear the text. 
 
-<br>
 <img src="images/response.png" alt="insert api key on line 48">
 
 ## Enjoy!
