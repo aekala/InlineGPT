@@ -3,8 +3,6 @@ InlineGPT is a Google Chrome extension for querying OpenAI's ChatGPT text comple
 <br>
 Per OpenAI, the completions endpoint can be used for a wide variety of tasks. It provides a simple but powerful interface to any of our models. You input some text as a prompt, and the model will generate a text completion that attempts to match whatever context or pattern you gave it. For example, if you give the API the prompt, "As Descartes said, I think, therefore", it will return the completion " I am" with high probability.
 
-<br>
-
 # Setup
 
 ## 1) Download
@@ -69,7 +67,5 @@ Once you've written your prompt, InlineGPT will run your prompt through OpenAI's
 
 <br>
 <img src="images/response.png" alt="insert api key on line 48">
-
-<br> 
 
 ## Enjoy!
