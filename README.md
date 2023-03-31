@@ -3,6 +3,8 @@ InlineGPT is a Google Chrome extension for querying OpenAI's ChatGPT text comple
 <br>
 Per OpenAI, the completions endpoint can be used for a wide variety of tasks. It provides a simple but powerful interface to any of our models. You input some text as a prompt, and the model will generate a text completion that attempts to match whatever context or pattern you gave it. For example, if you give the API the prompt, "As Descartes said, I think, therefore", it will return the completion " I am" with high probability.
 
+The name InlineGPT is because I initially was going to make an extension to call ChatGPT inline from any input or textarea HTML element in the browser. I did get the code for that working but found that for a lot of sites I wanted to use it for like Facebook Messenger and Twitter dynamically generate a span element in the DOM for input instead of using input or textarea for their input fields. The first problem this created was that grabbing that specific span element would be difficult as it did not have a static id I could use to locate it within the DOM. Another problem was that an input event is only fired when the value of an <input>, <select>, or <textarea> element has been changed, meaning that I would not be able to attach such an event listener to the span element where I to find a way to grab it from the DOM. I'm sure there are workarounds for both of these but I was planning on adding a popup to use call ChatGPT anyway and didn't want to spend too much time on this project. 
+
 # Setup
 
 ## 1) Download
