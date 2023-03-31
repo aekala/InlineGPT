@@ -36,12 +36,11 @@ const wait = async (ms) => {
 }
 
 async function callChatGPT(prompt) {
-     const requestBody = {
+    const requestBody = {
         "model": "text-davinci-003",
         "prompt": prompt,
         "max_tokens": 2048
     }
-    
     await fetch("https://api.openai.com/v1/completions", {
         method: "POST",
         headers: {
