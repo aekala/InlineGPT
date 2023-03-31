@@ -11,9 +11,11 @@ const handleInputEvent = async (event) => {
         injectCSS(".prompt-selection::selection  { background: #fcba03 !important }");
         activeElement.classList.add("prompt-selection");
         activeElement.select();
-        await wait(1500);
+        await wait(2000);
+        activeElement.blur();
         activeElement.value = "Querying ChatGPT...";
         activeElement.classList.remove("prompt-selection");
+        await wait(1500);
         const completion = await callChatGPT(prompt);
         activeElement.value = completion;
     } 
@@ -34,8 +36,7 @@ const wait = async (ms) => {
 }
 
 async function callChatGPT(prompt) {
-    await wait(2000);
-    const requestBody = {
+     const requestBody = {
         "model": "text-davinci-003",
         "prompt": prompt,
         "max_tokens": 2048
@@ -53,6 +54,9 @@ async function callChatGPT(prompt) {
     .then((data) => completion = data);
 
     console.log(completion);
+    if (completion.error) {
+        return completion.error.message;
+    } 
 
     return completion.choices[0].text.trim();
 }
